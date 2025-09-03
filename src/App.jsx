@@ -9,12 +9,14 @@ import CTASection from './components/CTA'
 import HowItWorks from './components/HowITWorks'
 import Problems from './components/Problems'
 import Pillars from './components/Pillars'
-import Contact from './components/Contact';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
-<Router>
-      <Navbar />
+    <Router>
+      {/* ✅ Navbar har jagah visible */}
+      <Navbar />  
+
       <Routes>
         <Route path="/" element={
           <div className="container">
@@ -37,11 +39,14 @@ const App = () => {
               <FAQSection />
             </div>
             <CTASection />
-            <Footer />
           </div>
         } />
+        
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      {/* ✅ Footer bhi har jagah visible */}
+      <Footer />  
     </Router>
   )
 }

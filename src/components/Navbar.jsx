@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +24,24 @@ const Navbar = () => {
     }, []);
 
     const scrollToSection = (sectionId) => {
+        // If we're not on the home page, navigate to home first
+        if (location.pathname !== '/') {
+            navigate('/');
+            // Wait a bit for the page to load, then scroll
+            setTimeout(() => {
+                scrollToSectionOnHome(sectionId);
+            }, 100);
+        } else {
+            scrollToSectionOnHome(sectionId);
+        }
+        
+        // Close mobile menu if open
+        if (isMobileMenuOpen) {
+            toggleMobileMenu();
+        }
+    };
+
+    const scrollToSectionOnHome = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
             const navHeight = document.querySelector('.navbar').offsetHeight;
@@ -29,9 +50,6 @@ const Navbar = () => {
                 top: sectionTop,
                 behavior: 'smooth'
             });
-            if (isMobileMenuOpen) {
-                toggleMobileMenu();
-            }
         }
     };
 
@@ -39,6 +57,14 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
         document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : '';
     };
+
+    // Close mobile menu when route changes
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            setIsMobileMenuOpen(false);
+            document.body.style.overflow = '';
+        }
+    }, [location.pathname]);
 
     return (
         <>
@@ -70,9 +96,20 @@ const Navbar = () => {
                         onClick={toggleMobileMenu}
                         aria-label="Toggle mobile menu"
                     >
-                        <span className="mobile-menu-line"></span>
-                        <span className="mobile-menu-line"></span>
-                        <span className="mobile-menu-line"></span>
+                        <svg
+                            className="hamburger-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#61E768"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
                     </button>
                 </div>
             </nav>
@@ -109,25 +146,26 @@ const Navbar = () => {
                 </div>
 
                 <nav className="mobile-menu-nav">
-                    <a href="#features" className="mobile-menu-link" onClick={toggleMobileMenu}>
-                        Features
+                    <a onClick={() => scrollToSection('problems')} className="mobile-menu-link">
+                        Problems
                     </a>
-                    <a href="#benefits" className="mobile-menu-link" onClick={toggleMobileMenu}>
+                    <a onClick={() => scrollToSection('benefits')} className="mobile-menu-link">
                         Benefits
                     </a>
-                    <a href="#howitworks" className="mobile-menu-link" onClick={toggleMobileMenu}>
-                        How It Works
+                    <a onClick={() => scrollToSection('pillars')} className="mobile-menu-link">
+                        PulseOne Ecosystem
                     </a>
-                    <a href="#contact" className="mobile-menu-link" onClick={toggleMobileMenu}>
-                        Contact
+                    <a onClick={() => scrollToSection('faq')} className="mobile-menu-link">
+                        FAQs
                     </a>
                 </nav>
 
                 <div className="mobile-menu-footer">
-                    <button className="mobile-menu-cta" onClick={toggleMobileMenu}>
+                    <button className="btn" onClick={() => scrollToSection('hero')}>
                         Get Started
                     </button>
                 </div>
+
             </div>
         </>
     );

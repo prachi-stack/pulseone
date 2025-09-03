@@ -108,27 +108,11 @@
 .nav-link:hover::after {
   width: 100%;
 }
-
-.learn-more-btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  border-radius: 0.75rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  border: none;
-  background: var(--color-primary-green);
-  color: black;
-}
-
-.learn-more-btn:hover {
-  transform: scale(1.05);
-  background: #4fd670;
-}
+ 
 
 .btn.second {
-  border: 2px solid var(--color-primary-green); /* same green as main button */
+  border: 2px solid var(--color-primary-green);
+  /* same green as main button */
   background: transparent;
   color: white;
   font-weight: 600;
@@ -136,8 +120,10 @@
 }
 
 .btn.second:hover {
-  background: var(--color-primary-green); /* hover pe green fill */
-  color: white; /* text white hi rahe */
+  background: var(--color-primary-green);
+  /* hover pe green fill */
+  color: white;
+  /* text white hi rahe */
   transform: scale(1.05);
 }
 
@@ -212,11 +198,17 @@
 
 .mobile-menu-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, close button right */
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-menu-close svg {
+  width: 24px;
+  height: 24px;
+  stroke: #61E768; /* make it the green of your theme */
 }
 
 .mobile-menu-logo {
@@ -228,10 +220,11 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-gray-medium);
   padding: 0.25rem;
   border-radius: 0.25rem;
-  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu-close:hover {
@@ -332,6 +325,12 @@
   .navbar-container {
     padding: 0 1rem;
   }
+
+  .hamburger-icon {
+    width: 28px;
+    height: 28px;
+  }
+
 }
 
 .btn {
@@ -346,7 +345,7 @@
 }
 
 /* Tablet: 426px–768px */
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .btn {
     font-weight: 600;
     font-size: 16px;
@@ -355,5 +354,12 @@
     cursor: pointer;
     border: 1px solid transparent;
     min-width: none;
+  }
+
+  @media (max-width: 480px) {
+    .hamburger-icon {
+      width: 28px;
+      height: 28px;
+    }
   }
 }

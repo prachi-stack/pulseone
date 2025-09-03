@@ -136,7 +136,7 @@ export default function Pillars() {
       {/* Section Header */}
       <div className="pillars-section-container">
         <h1 className="pillars-section-title">
-          Four Pillars. One Heartbeat. Complete Healthcare Access.
+          Four Pillars. One Heartbeat. <br /> Complete Healthcare Access.
         </h1>
         <p className="pillars-section-subtitle">
           From village clinic to city hospital, seamless care, transparent costs, instant financing.
