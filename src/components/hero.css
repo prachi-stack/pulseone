@@ -1,0 +1,411 @@
+/*! CSS Used from: Embedded */
+
+.header-welcome2 {
+    padding: 3rem 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/*! CSS Used from: https://cdn.prod.website-files.com/5e7dd8d070cf6c6a828d95b4/css/tomorrowhealth-home.shared.dd81fc982.min.css */
+a {
+    background-color: #0000;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+h1 {
+    margin: .67em 0;
+    font-size: 2em;
+}
+
+img {
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 44px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.w-embed:before,
+.w-embed:after {
+    content: " ";
+    grid-area: 1/1/2/2;
+    display: table;
+}
+
+.w-embed:after {
+    clear: both;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.circle-txt {
+    background-image: url(https://cdn.prod.website-files.com/5e7dd8d070cf6c6a828d95b4/62586b9b0e949ec5014d9fd8_Circle.svg);
+     background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-banner-div {
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.header-banner-div.banner-info {
+    align-items: flex-end;
+}
+
+.heading-7 {
+    color: var(--primary-navy);
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    font-family: freight-text-pro, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+.paragraph-6 {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.header-banner-txt-div {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 82%;
+    max-width: 607px;
+    margin-right: 3%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+}
+
+.green-wave-bg {
+    mix-blend-mode: multiply;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 100%;
+    position: absolute;
+    inset: auto 0% 0%;
+}
+
+@media (min-width: 1441px) {
+    .green-wave-bg {
+        border-radius: 0;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.home-header-nav {
+    letter-spacing: -1.5px;
+    margin-top: 0;
+    font-family: freight-text-pro, sans-serif;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.header-banner2 {
+    background-color: #f0f1ed;
+    border-radius: 30px;
+    min-height: 600px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    position: relative;
+    overflow: visible;
+    width: 100%;
+}
+
+@media (min-width: 1441px) {
+    .header-banner2 {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .header-banner-inner {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+
+.header-banner-img2 {
+    object-fit: cover;
+    object-position: 50% 100%;
+    border-radius: 20px;
+    width: 434px;
+    max-height: 600px;
+    position: relative;
+    inset: 80px 0% 0% 0;
+    box-shadow: -28px 28px 70px -20px #0006;
+}
+
+@media screen and (min-width:1280px) {
+    .header-banner-div {
+        align-items: center;
+        padding-top: 3rem;
+    }
+
+    .heading-7 {
+        margin-bottom: 20px;
+    }
+
+    .paragraph-6 {
+        margin-bottom: 30px;
+    }
+
+    .header-banner-txt-div {
+        max-width: 607px;
+        padding-top: 135px;
+        padding-bottom: 135px;
+    }
+
+    .home-header-nav {
+        margin-bottom: 30px;
+        font-size: 90px;
+        padding-top: 3rem;
+    }
+
+    .header-banner2 {
+        height: 770px;
+        min-height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .header-banner-img2 {
+        object-fit: cover;
+        object-position: 50% 100%;
+        width: 536px;
+        max-height: 725px;
+        top: 80px;
+    }
+}
+@media screen and (min-width: 991px) and (max-width: 1280px){
+.home-header-nav{
+    padding-top: 2rem;
+}
+}
+
+@media screen and (max-width:991px) {
+    .header-banner-div {
+        align-self: center;
+        align-items: center;
+        
+    }
+
+    .home-header-nav {
+padding-top: 50px;
+    }
+    .header-banner-div.banner-info {
+        order: -1;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .header-banner-txt-div {
+        text-align: left;
+        align-items: flex-start;
+        width: 92%;
+        margin-top: 80px;
+        margin-right: 0%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .green-wave-bg {
+        border-radius: 0;
+    }
+
+    .header-banner2 {
+        border-radius: 0;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-banner-img2 {
+        width: 600px;
+        margin-left: -20px;
+        margin-right: -20px;
+        transform: translateY(57px);
+    }
+.home-header-nav {
+    font-size: 2.5rem;
+}
+    
+
+    
+}
+
+
+@media screen and (max-width:768px) {
+    .header-banner-div {
+        margin-left: 40px;
+        margin-right: 40px;
+          
+    }
+
+    .header-banner-img2 {
+        top: 40px;
+    }
+
+    .header-banner-div.banner-info {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .home-header-nav {
+        font-size: 2.5rem;
+    }
+
+    .heading-7 {
+        font-size: 1.5rem;
+        line-height: 100%;
+    }
+
+    .header-banner-txt-div {
+        width: auto;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .green-wave-bg {
+        object-fit: cover;
+        object-position: 100% 50%;
+        width: 200%;
+        max-width: 200%;
+        inset: auto 0% 0% auto;
+    }
+
+    .header-banner-img2 {
+        border-radius: 20px;
+    }
+    .paragraph-6 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:479px) {
+    .header-banner-div {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .heading-7 {
+        margin-top: 0;
+        font-size: 2rem;
+    }
+
+    .paragraph-6 {
+        font-size: 1rem;
+    }
+
+    .header-banner-txt-div {
+        margin-top: 60px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .home-header-nav {
+        margin-bottom: 30px;
+        font-size: 3rem;
+        margin-top: 20px;
+    }
+
+    .header-banner2 {
+        min-height: auto;
+    }
+
+    .header-banner-img2 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}/* For screens between 425px and 768px */
+@media screen and (min-width:425px) and (max-width:768px) {
+  .header-banner-txt-div {
+    padding-top: 40px;   /* Pehle yaha kaafi zyada tha, ise kam karo */
+     margin-top: 20px;    /* Extra margin hatao ya kam karo */
+  }
+
+  .header-banner-img2 {
+    top: 30px;           /* Agar top se push ho raha hai toh ise bhi kam karo */
+    transform: translateY(20px); /* Default 57px tha, ise kam kar do */
+  }
+
+   
+}
+

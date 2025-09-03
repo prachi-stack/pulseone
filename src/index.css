@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+/* Mobile First (default) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+ }
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Small Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1440px) {
+  body {
+    font-size: 24px;
+  }
+}
